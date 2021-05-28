@@ -1,0 +1,38 @@
+<head>
+	<!-- Load plotly.js into the DOM -->
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+
+</head>
+
+<body>
+	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+		<script>
+var values = [
+      ['CHETANA TRADING','JALARAM JYOT AGENCIES','Mopa Distributors Pvt.Ltd','RONAK ENTERPRISES','RONAKK ENTERPRISES','Shree Mahaveer Distributors','SHREE MOMAI ENTERPRISES','Texas Corporation'],
+      [1791, 3262, 3090,2, 2986, 101,1431,87]]
+
+
+var data = [{
+  type: 'table',
+  header: {
+    values: [["<b>Sales Rep</b>"], ["<b>Count</b>"]],
+    align: ["left", "center"],
+    line: {width: 1, color: '#506784'},
+    fill: {color: '#119DFF'},
+    font: {family: "Arial", size: 12, color: "white"}
+  },
+  cells: {
+    values: values,
+    align: ["left", "center"],
+    line: {color: "#506784", width: 1},
+	 fill: {color: ['#25FEFD', 'white']},
+    font: {family: "Arial", size: 11, color: ["#506784"]}
+  }
+}]
+
+Plotly.newPlot('myDiv', data);
+
+</script>
+</body>
+
+
